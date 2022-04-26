@@ -1,0 +1,11 @@
+.başlık{
+    background-color: rgba(38, 81, 26, 0.883);
+    text-align: center;
+    color: rgba(245, 245, 245, 0.979);
+    margin-top: 1px;
+}
+footer{
+    text-align: end;
+    padding-right:20px;
+  }
+  

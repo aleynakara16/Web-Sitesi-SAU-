@@ -1,0 +1,40 @@
+body{
+    background-color: rgba(169, 169, 169, 0.338);  
+}
+.anabaşlık{
+    background-color: rgba(124, 159, 35, 0.234);
+    background-size: cover;	
+    font-style: italic;
+}
+a{
+    color: brown;
+text-decoration: underline;
+}
+a:hover{
+    color: black;
+}
+.ortabaşlık{
+    background-color: rgba(213, 145, 72, 0.457);
+}
+.diğerbaşlıklar{
+    color: rgba(21, 19, 80, 0.829);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0px 4px 4px rgba(16, 16, 22, 0.438); ;
+}
+
+p{
+text-align: justify;
+}
+
+.tanıtım{
+    background-color: rgba(169, 169, 169, 0.338);  
+    margin: 10px auto;
+    padding: 5px 50px;
+    width: 1500px;
+}
+footer{
+	text-align: end;
+	padding-right:20px;
+  }
+
+.slayt {display:none;}
