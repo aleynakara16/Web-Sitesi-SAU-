@@ -1,28 +1,23 @@
 body {
-  background: #a8aeb94d;
-}
-
-.menuayrac{
-  font-size: 20px;
-  margin: 0px 8px 5px 8px;
-  color: rgba(255, 255, 255, 0.587);
-}
-
-
-.hizala{
-  margin:4px 1px 3px 1px ;
-  padding: 20px 0 0 0;
-  border-style: solid;
-  border-block: 2px;
-  border-color: rgb(95, 158, 160);
-  background-color: rgba(0, 0, 0, 0.059)
-
+  background-color: rgba(169, 169, 169, 0.338);  
 
 }
-h3 {
-color:rgba(6, 6, 91, 0.776);
+.menü{
+  background-color: rgba(88, 88, 88, 0.426);
+}
+.başlık{
+  background-color:#7d7976;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3{
+  color: sienna;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: underline;
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
 }
 footer{
-  text-align: end;
-  padding-right:20px;
-}
+	text-align: end;
+	padding-right:20px;
+  }

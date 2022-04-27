@@ -21,12 +21,28 @@
         </div>
         <div class="form-group">
             <input type="password" class="form-control" id="Password" name="Password" placeholder="Password*" required="required">
+            <div class="display-4" id="hatalışifre"></div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-sm active">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block btn-sm active" onclick="kontrol()">Log in</button>
         </div> 
         <footer class="text-danger small">please fill in the fields with *</footer> 
+        <div class="display-4 text-danger small" id="hatalı"></div>
+
     </div>
    
+
+
+ <script>
+function kontrol()
+{ 
+  if(username!="b211210004@sakarya.edu.tr" ||password!="b211210004")
+  {
+      document.getElementById("hatalı").innerHTML= "you entered the wrong username or password";
+  }
+  else{}
+  }
+
+ </script>   
 </body>
 </html>                                		
