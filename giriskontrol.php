@@ -7,7 +7,7 @@ if($adsoyad && $sifre) // veriler boş değilse buradan devam eder
     {  
         echo "hoşgeldin". $adsoyad;
 
-       header("location:ANASAYFA.html"); 
+       header("location:anasayfa.html"); 
     }
     else
     {
