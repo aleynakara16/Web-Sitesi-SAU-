@@ -1,65 +1,174 @@
-<!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
+    <title>İletişim sayfası</title>
+   <meta charset="utf-8"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
     <link rel="stylesheet" href="iletişimstiil.css" >
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="bg-info text-white text-center py-2 mt-5">
+        <div class="bg-dark text-white text-center py-3 ">
              <h2>İLETİŞİM SAYFASI</h2>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 py-5"><!--RESİM-->
                 <div>
-                    <img class="img-fluid" src="RESİMLER/iletişim.jpg">
+                    <img class="img-fluid" src="RESİMLER/iletisim-kanallari.png">
                 </div>
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <form action="" method="post">
+                <form action="FormBilgileri.php" method="post" name="bilgi">
                     <div class="card mt-4">
-                        <div class="card-body p-3">
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control" value="" name="kullanıcı adı" id="username" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)" placeholder="Kullanıcı Adınız(Username)" required >
-                                    <span id="aduyarı"></span>
+                        <div class="card-body p-3 ">
+                            <div class="form-group"><!--KULLANICI ADI-->
+                                <div class="mb-2">
+                                    <label>Kullanıcı Adınız(Username):</label>                         
+                                    <input type="text" class="form-control" value="" name="kullanıcıadı" id="username" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)">
+                                    <span class="hata"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="email" class="form-control" value=""  name="e-mail" id="mail" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)" placeholder="E-Posta(Mail)" required>
-                                    <span id="mailuyarı"></span>
+                            <div class="form-group"><!--MAİL-->
+                                <div class="mb-2">
+                                    <label>E-Posta(Mail):</label>
+                                    <input type="text" class="form-control" value=""  name="e-mail" id="mail" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)">
+                                    <span class="hata"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <input type="tel" class="form-control" value=""  name="telefon" id="phone" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)" placeholder="Telefon(Phone Number)" required>
-                                    <span id="telefonuyarı"></span>
+                            <div class="form-group"><!--TELEFON-->
+                                <div class="mb-2">
+                                    <label>Telefon(Phone Number):</label>
+                                    <input type="tel" class="form-control" value=""  name="telefon" id="phone" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)">
+                                    <span class="hata"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group mb-2">
-                                    <textarea class="form-control" value="" name="mesaj" id="message" rows="6" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)"  placeholder="Lütfen Mesajınızı Buraya Yazın.."  required></textarea>
-                                    <span id="mesajuyarı"></span>
+                            <div class="form-group"><!--TARİH-->
+                                <label>Doğum Tarihiniz:</label>
+                                <input type="date" class="form-control" value="Doğum Tarihiniz"  name="tarih" id="tarih" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)"> 
+                                <span class="hata"></span>
+                            </div>
+                            <div class="form-group"><!--İL-->
+                                <label>Yaşadığınız Şehir</label>
+                                <select class="form-control" id="iller" name="iller[]" value="" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)">
+                                 <option value=""></option>
+                                 <option value="1">Adana</option>
+                                 <option value="2">Adıyaman</option>
+                                 <option value="3">Afyonkarahisar</option>
+                                 <option value="4">Ağrı</option>
+                                 <option value="5">Amasya</option>
+                                 <option value="6">Ankara</option>
+                                 <option value="7">Antalya</option>
+                                 <option value="8">Artvin</option>
+                                 <option value="9">Aydın</option>
+                                 <option value="10">Balıkesir</option>
+                                 <option value="11">Bilecik</option>
+                                 <option value="12">Bingöl</option>
+                                 <option value="13">Bitlis</option>
+                                 <option value="14">Bolu</option>
+                                 <option value="15">Burdur</option>
+                                 <option value="16">Bursa</option>
+                                 <option value="17">Çanakkale</option>
+                                 <option value="18">Çankırı</option>
+                                 <option value="19">Çorum</option>
+                                 <option value="20">Denizli</option>
+                                 <option value="21">Diyarbakır</option>
+                                 <option value="22">Edirne</option>
+                                 <option value="23">Elazığ</option>
+                                 <option value="24">Erzincan</option>
+                                 <option value="25">Erzurum</option>
+                                 <option value="26">Eskişehir</option>
+                                 <option value="27">Gaziantep</option>
+                                 <option value="28">Giresun</option>
+                                 <option value="29">Gümüşhane</option>
+                                 <option value="30">Hakkâri</option>
+                                 <option value="31">Hatay</option>
+                                 <option value="32">Isparta</option>
+                                 <option value="33">Mersin</option>
+                                 <option value="34" >İstanbul </option>
+                                 <option value="35">İzmir</option>
+                                 <option value="36">Kars</option>
+                                 <option value="37">Kastamonu</option>
+                                 <option value="38">Kayseri</option>
+                                 <option value="39">Kırklareli</option>
+                                 <option value="40">Kırşehir</option>
+                                 <option value="41">Kocaeli</option>
+                                 <option value="42">Konya</option>
+                                 <option value="43">Kütahya</option>
+                                 <option value="44">Malatya</option>
+                                 <option value="45">Manisa</option>
+                                 <option value="46">Kahramanmaraş</option>
+                                 <option value="47">Mardin</option>
+                                 <option value="48">Muğla</option>
+                                 <option value="49">Muş</option>
+                                 <option value="50">Nevşehir</option>
+                                 <option value="51">Niğde</option>
+                                 <option value="52">Ordu</option>
+                                 <option value="53">Rize</option>
+                                 <option value="54">Sakarya</option>
+                                 <option value="55">Samsun</option>
+                                 <option value="56">Siirt</option>
+                                 <option value="57">Sinop</option>
+                                 <option value="58">Sivas</option>
+                                 <option value="59">Tekirdağ</option>
+                                 <option value="60">Tokat</option>
+                                 <option value="61">Trabzon</option>
+                                 <option value="62">Tunceli</option>
+                                 <option value="63">Şanlıurfa</option>
+                                 <option value="64">Uşak</option>
+                                 <option value="65">Van</option>
+                                 <option value="66">Yozgat</option>
+                                 <option value="67">Zonguldak</option>
+                                 <option value="68">Aksaray</option>
+                                 <option value="69">Bayburt</option>
+                                 <option value="70">Karaman</option>
+                                 <option value="71">Kırıkkale</option>
+                                 <option value="72">Batman</option>
+                                 <option value="73">Şırnak</option>
+                                 <option value="74">Bartın</option>
+                                 <option value="75">Ardahan</option>
+                                 <option value="76">Iğdır</option>
+                                 <option value="77">Yalova</option>
+                                 <option value="78">Karabük</option>
+                                 <option value="79">Kilis</option>
+                                 <option value="80">Osmaniye</option>
+                                 <option value="81">Düzce</option>                           
+                                      
+                                  </select>
+                            </div>
+                            <div class="form-group"><!--MESAJ-->
+                                <div class="mb-2">
+                                    <label>Mesajınız:</label>
+                                    <textarea class="form-control" value="" name="mesaj" id="message" rows="3" onfocus="odaklan(this.id)" onblur="odaklanma(this.id,this.value)"></textarea>
+                                    <span class="hata"></span>
+                                 </div>
+                            </div> 
+                            <div class="form-group"><!--CİNSİYET-->
+                                <label>Cinsiyetiniz:</label>
+                                Kadın <input type="radio" name="cinsiyet[]" id="kadın" value=""> 
+                                Erkek <input type="radio" name="cinsiyet[]" id="erkek" value=""> 
+                            </div>
+                            <div class="form-group ">  <!--HABER-->
+                                <div><label>Bizi nerden duydunuz:</label></div>
+                                İnstagram<input type="checkbox" name="sosyalağ[]" id="hobi1" value="İnstagram" style="margin-right:15px ;">
+                                Facebook <input type="checkbox" name="sosyalağ[]"id="hobi2" value="Facebook" style="margin-right:15px ;">
+                                Twitter  <input type="checkbox" name="sosyalağ[]" id="hobi3" value="Twitter" style="margin-right:15px ;">
+                                YouTube  <input type="checkbox" name="sosyalağ[]" id="hobi4" value="YouTube" style="margin-right:15px ;">
+                                Diğer    <input type="checkbox" name="sosyalağ[]" id="hobi5" value="diğer" style="margin-right:15px ;">
 
-                                </div>
                             </div>
-                            <!-- <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>Kadın
-                             </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>Erkek
-                              </div> -->
-                            <div class="text-center">
-                                <input type="submit" value="GÖNDER" class="btn btn-info btn-block" onclick="kontrol()">
+                            <div class="form-group"><!--Dosya-->
+                                <label>Eklemek İstediğiniz Dosya:</label>
+                                <input type="file" class="form-control-file" name="resimekle" id="resimekle" value="" multiple >
+                            </div>
+                            <br>
+                            <div class="text-center"><!--BUTONLAR-->
+                                <input type="submit" value="GÖNDER" class="btn btn-success btn-block" onclick="kontrol()">
                                 <input type="reset" value="SİL" class="btn btn-info btn-block">
                             </div>
-                            
                         </div>
                     </div>
                 </form>
@@ -67,19 +176,26 @@
         </div>
     </div>
 
-  <script>
-      function odaklan(x)
+    <footer class="bg-dark text-white">
+   
+        <small><i>&copy 2022 Telif Hakları Saklıdır<br> aleyna kara</i></small>
+     
+    </footer>
+
+
+    <script type="text/javascript">
+    function odaklan(x)
       {
-          if(x == "username" || x == "mail" || x=="phone" || x=="message")
+          if(x == "username" || x == "mail" || x=="phone" || x=="message"|| x=="tarih"||x=="resimekle"|| x=="iller")
           {
-              document.getElementById(x).style.background="#ffdb";
+              document.getElementById(x).style.background="#dddd";
               document.getElementById(x).style.color="gray";
 
           }
-          else{}
+          else{ }
 
       }
-      function odaklanma(x,y)
+    function odaklanma(x,y)
       {
           if( y == "")
           {
@@ -90,7 +206,85 @@
           else{}
 
       }
-     
+   
+    function kontrol()
+    {
+        //telefon kontrol
+        var telDoğruMu=0;
+        var kullanıcıTelefon=document.getElementById("phone").value;
+        var tel = /^\d{11}$/;
+           if(tel.test(kullanıcıTelefon)==true)
+           {
+               telDoğruMu=1;
+           }
+          else
+          {}     
+
+
+        //mail kontrol
+        var mailDoğruMu=0;
+        var kullanıcıMail=document.getElementById("mail").value;
+        var regex = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+.)+([.])+[a-zA-Z0-9.-]{2,4}$/;
+	    if (regex.test(kullanıcıMail)==true)
+	    {  
+             mailDoğruMu=1;
+        }
+	    else
+     	{
+
+        }
+
+
+
+        Form=document.forms['bilgi']
+        //cinsiyet Kontrol
+        RadyoSecim=0;
+        for(i=0; i<Form.elements['cinsiyet[]'].length; i++)
+        {        
+          if(Form.elements['cinsiyet[]'][i].checked==1)
+            {
+              RadyoSecim=1;
+              break;
+            }
+        }
+        
+        //Checkbox kontrol
+        CheckSecim=0;
+        for(i=0; i<Form.elements['sosyalağ[]'].length; i++)
+        {
+            if(Form.elements['sosyalağ'][i].checked==1)
+            {
+                CheckSecim=1;
+                break;
+            }
+        }
+
+        // tarih kontrol
+        var tarihSecim;
+        if(Form.elements['tarih'].value=="")
+        {
+            tarihSecim=0;
+        }
+        else{tarihSecim=1;}
+
+
+        if(Form.elements['kullanıcıadı'].value.length==0) alert("Lütfen kullanıcı adınızı giriniz"); //kullanıcı adı
+
+        else if(Form.elements['e-mail'].value.length==0) alert("Lütfen mailinizi  giriniz"); //MAİL
+        else if(mailDoğruMu==0) alert("Lütfen maili doğru giriniz"); //mail kontrol
+
+        else if(Form.elements['telefon'].value.length==0) alert("Lütfen telefon numaranızı giriniz"); //telefon
+        else if(telDoğruMu==0) alert("Lütfen telefon numaranızı doğru giriniz"); //telefon kontrol
+
+        else if(Form.elements['mesaj'].value.length==0) alert("Lütfen mesajınızı  giriniz"); //mesaj
+        else if(Form.elements['iller[]'].selectedIndex<1) alert("Lütfen yaşadığınız ili seçiniz"); //il
+        else if(RadyoSecim==0) alert("Lütfen cinsiyet seçiniz"); //cinsiyet
+        else if(CheckSecim==0) alert("Lütfen bizi nereden duyduğunuzu belirtiniz"); //duyulma
+        else if(tarihSecim==0) alert("Lütfen doğum tarihinizi belirtiniz"); //tarih
+
+        else Form.submit();
+       
+    }
   </script>  
 </body>
 </html>
