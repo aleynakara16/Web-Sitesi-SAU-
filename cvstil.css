@@ -1,6 +1,45 @@
-aside{
-   
-    margin: 56px 0 0 0 ;
-    background-color: rgba(126, 128, 137, 0.328);
-    float: left;
+body {
+  background-color: rgba(169, 169, 169, 0.338);  
+
 }
+.sol{
+  background-color: rgb(42, 48, 59);
+  color: rgba(245, 245, 245, 0.613);
+}
+a:link ,a:visited{
+  color: rgba(245, 245, 245, 0.613);
+}
+a:hover{
+  color: rgba(245, 245, 245, 0.976);
+}
+footer{
+  text-align: end;
+  padding-right:20px; 
+}
+h1{
+  color: black;
+  font-family:serif
+  
+}
+hr{
+  height: 1px;
+   background-color: #ff7300a3;
+    border: none;
+}
+h3{
+  color:  #c25a05e0;
+  font-family:sans-serif;
+}
+#listeişaret{
+  list-style-type: none;
+  margin-left: 3px;
+  padding-left: 3px;
+}
+.resimhizala{
+  margin-top: 15px;
+}
+p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+  

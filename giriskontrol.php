@@ -5,9 +5,8 @@ if($adsoyad && $sifre) // veriler boş değilse buradan devam eder
 {
     if($adsoyad == "b211210004@sakarya.edu.tr" && $sifre=="b211210004")
     {  
-        echo "hoşgeldin". $adsoyad;
+        echo "HOŞGELDİN      ". $adsoyad;
 
-       header("location:anasayfa.html"); 
     }
     else
     {

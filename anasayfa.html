@@ -1,45 +1,42 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <title>Ana Sayfa</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="anasayfastil.css" />
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ana sayfa</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="anasayfastil.css" />
 
 </head>
-
-
 <body>
-  <nav class="navbar navbar-expand navbar-dark  menü">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+<div><!--menü-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark  menü">
+        <div class="container-fluid">
+            <a class="navbar-brand disabled text-white">ALEYNA KARA</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="anasayfa.html" class="nav-item nav-link active text-white-50">ANA SAYFA</a>
+                    <a href="Sehrim.html" class="nav-item nav-link text-white-50">ŞEHRİM VE MİRASIMIZ</a>
+                    <a href="CV.html" class="nav-item nav-link text-white-50">ÖZGEÇMİŞİM</a>
+                    <a href="İlgiAlanlarım.html" class="nav-item nav-link text-white-50">İLGİ ALANLARIM</a>                    
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="İLETİŞİM.html" class="nav-item nav-link text-white-50" tabindex="-1">İLETİŞİM</a>
 
-        <li class="nav-item">
-          <a class="nav-link active" href="anasayfa.html.">ANA SAYFA</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="İlgiAlanlarım.html">İLGİ ALANLARIM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="İLETİŞİM.html">İLETİŞİM BİLGİLERİ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Sehrim.html">ŞEHRİM</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="giriş.html">GİRİŞ YAP</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+                    <a href="giriş.html" class="nav-item nav-link text-white-50">GİRİŞ YAP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
 
- <div class="container-flu"> <!-- GİRİŞTEKİ RESİM EKLENDİ-->
+
+<div class="container-flu"> <!-- GİRİŞTEKİ RESİM EKLENDİ-->
     <img class="img-fluid  w-100 "  src="RESİMLER/bilgisayar.jpg" alt="çalışma masası">
   </div>
 
@@ -128,3 +125,4 @@
  
  
 </body>
+</html>

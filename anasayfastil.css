@@ -4,7 +4,9 @@ body {
 }
 .menü{
   background-color: rgba(88, 88, 88, 0.426);
+  padding: 10px;
 }
+
 .başlık{
   background-color:#7d7976;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -21,3 +23,5 @@ footer{
 	text-align: end;
 	padding-right:20px;
   }
+
+  
