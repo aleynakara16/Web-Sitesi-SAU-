@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>iletişim bilgileri</title>
+<head></head>
 <style>
 body {
     background-color: #a9a9a956;  
@@ -24,20 +22,18 @@ table{
  
 <body>
 <?php
-
-
     $kullanıcıadı =$_POST["kullanıcıadı"];
     $mail =$_POST["mail"];
     $telefon =$_POST["telefon"];
     $dtarihi =$_POST["tarih"];
     $mesaj =$_POST["mesaj"];
-    $cinsiyet =$_POST["cinsiyet"];
     $dosya =$_POST["resimekle"];
     $sosyalağ =$_POST["sosyalağ"];
+    $cinsiyet =$_POST["cinsiyet"];
+
+
     $formİller=$_POST['iller'];
-    
-  
-    
+
     //il seçimi için gerekli işlemler
     $iller=array("","Adana","Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin",
     "Aydın", "Balıkesir","Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale",

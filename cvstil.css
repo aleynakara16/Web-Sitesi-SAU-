@@ -8,9 +8,11 @@ body {
 }
 a:link ,a:visited{
   color: rgba(245, 245, 245, 0.613);
+  text-decoration: none;
 }
 a:hover{
   color: rgba(245, 245, 245, 0.976);
+  text-decoration: none;
 }
 footer{
   text-align: end;
@@ -30,7 +32,7 @@ h3{
   color:  #c25a05e0;
   font-family:sans-serif;
 }
-#listeişaret{
+ul{
   list-style-type: none;
   margin-left: 3px;
   padding-left: 3px;

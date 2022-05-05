@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sakarya Üniversitesi Web Teknolojileri Ödevi anasayfa">
+    <meta name="keywords" content="ilgi alanım,film,sakarya üniversitesi ödev">
+    <meta name="author" content="Aleyna Kara"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>İlgi alanım</title>
+    <!--meü için-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- font awesome icons cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- custom css -->
     <link rel = "stylesheet" href = "ilgialanlarımstil.css">
 </head>
 <body>
+<div><!--menü-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark  menü">
+            <div class="container-fluid">
+                <a class="navbar-brand disabled text-white">ALEYNA KARA</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="anasayfa.html" class="nav-item nav-link  text-white-50">ANA SAYFA</a>
+                        <a href="Sehrim.html" class="nav-item nav-link text-white-50">ŞEHRİM VE MİRASIMIZ</a>
+                        <a href="CV.html" class="nav-item nav-link text-white-50 active">ÖZGEÇMİŞİM</a>
+                        <a href="İlgiAlanlarım.html" class="nav-item nav-link text-white-50">İLGİ ALANLARIM</a>                    
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a href="İLETİŞİM.html" class="nav-item nav-link text-white-50" tabindex="-1">İLETİŞİM</a>
+                        <a href="giriş.html" class="nav-item nav-link text-white-50">GİRİŞ YAP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+</div>
 
-  <div class="col-12">
-    
-  
-    <div class = "wrapper">
-      <!-- search container -->
+ 
+<div class = "wrapper">
+      <!-- arama containerı -->
       <div class = "search-container ">
           <div class = "search-element">
               <h3>FİLM ARAYIN:</h3>
-              <input type = "text" class = "form-control"  placeholder="aradığınız filmin adı..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+              <input type = "text" class = "form-control"  placeholder="aradığınız film..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
 
               <div class = "search-list mt-1" id = "search-list">
                   <!-- list here -->
@@ -30,21 +59,22 @@
               </div>
           </div>
       </div>
-      <!-- end of search container -->
+      <!-- arama containerı son -->
 
-      <!-- result container -->
+      <!-- sonuç containerı -->
       <div class = "container">
-          <div class = "result-container ">
-              <div class = "result-grid " id = "result-grid">
-                  <!-- movie information here -->
-                  <div class = "movie-poster">
-                      <img class="img-fluid"  src = "RESİMLER\guardians of the galaxy.jpg" alt = "movie poster">
+          <div class = "result-container   p-0 ">
+              <div class = "result-grid  " id = "result-grid">
+                  <!-- burada film bilgileri -->
+                  <div class = "movie-poster ">
+                      <img class="img-fluid"  src = "RESİMLER/galaxinin koruyucuları.jpg" alt = "movie poster">
                   </div>
-                  <div class = "movie-info p-2 m-5 ">
+
+                  <div class = "movie-info p-3 m-0 ">
+                      <h1 class="display-5">MY FAVORITE</h1>
                       <h3 class = "movie-title">Guardians of the Galaxy Vol. 2</h3>
-                      <ul class = "movie-misc-info">
+                      <ul class = "movie-misc-info ">
                           <li class = "year m-2">Year: 2017</li>
-                          <li class = "rated">Ratings: PG-13</li>
                           <li class = "released m-2">Released: 05 May 2017</li>
                       </ul>
                       <p class = "genre"><b>Genre:</b> Action, Adventure, Comedy</p>
@@ -57,27 +87,10 @@
               </div>
           </div>
       </div>
-      <!-- end of result container -->
-  </div>
+      <!-- sonuç containerı sonu -->
+ </div>
 
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-    <!-- movie app js -->
-    <script src = "ilgi.js"></script>
+ <!--  js -->
+<script src = "ilgi.js"></script>
 </body>
 </html>

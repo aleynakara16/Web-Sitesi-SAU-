@@ -73,7 +73,6 @@ function displayMovieDetails(details){
         <h3 class = "movie-title">${details.Title}</h3>
         <ul class = "movie-misc-info">
             <li class = "year">Year: ${details.Year}</li>
-            <li class = "rated">Ratings: ${details.Rated}</li>
             <li class = "released">Released: ${details.Released}</li>
         </ul>
         <p class = "genre"><b>Genre:</b> ${details.Genre}</p>
