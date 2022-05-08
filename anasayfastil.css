@@ -13,8 +13,8 @@ h3{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: underline;
 }
-p{
-  font-family: 'Times New Roman', Times, serif;
+p ,dd{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 footer{
 	text-align: end;

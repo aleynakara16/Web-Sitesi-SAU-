@@ -1,5 +1,6 @@
  body {
     background: #a8aeb94d;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 .başlık{
@@ -20,8 +21,9 @@ h3{
 .tanıtım{
   background-color: rgba(255, 255, 255, 0.663);
   border-radius: 10px;
-  box-shadow: 0px 5px 5px 0px rgba(16, 16, 22, 0.585);
+  box-shadow: 0px 4px 4px 0px rgba(16, 16, 22, 0.585);
   padding:  10px;;
+  padding-top: auto;
 }
 p{
   color: black;
