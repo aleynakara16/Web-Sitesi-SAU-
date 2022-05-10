@@ -269,7 +269,7 @@
          return false;
       }
              if( document.bilgi.telefon.value == "" || document.bilgi.telefon.value == null || isNaN( document.bilgi.telefon.value ) ||
-                document.bilgi.telefon.value.length<0 ||document.bilgi.telefon.value.length>12) {
+                document.bilgi.telefon.value.length<10 ||document.bilgi.telefon.value.length>=12) {
          
          alert( "Lütfen telefon numaranızı girin" );
          return false;
@@ -282,7 +282,7 @@
          alert( "Lütfen mesajınızı girin!" );
          return false;
       }
-            if(document.getElementById('kadın').checked == false && document.getElementById('erkek').checked == false)
+             if(document.getElementById('kadın').checked == false && document.getElementById('erkek').checked == false)
        {
          alert( "Lütfen cinsiyetini belirtin" );
          return false;
@@ -293,7 +293,10 @@
          alert( "Lütfen bizi nereden duyduğunuzu belirtin" );
          return false;
        }
-
+             if(document.getElementById("resimekle").files.length === 0) {
+               alert( "Lütfen dosya ekleyin!" );
+               return false;
+            }
               else{ return true ; }
         }
 </script> 
