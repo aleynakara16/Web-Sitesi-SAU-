@@ -8,6 +8,7 @@ h1{
     font-family: fantasy;
     text-decoration:underline ;
 }
+
 #movie-search-box{
     background-color:whitesmoke;
     height: 25%;
@@ -41,10 +42,8 @@ img{
 .search-element h3{
     align-self: center;
     margin-right: 1px;
-    font-size: 35px;
+    font-size: 20px;
     color: #fff;
-    font-weight: 500;
-    margin-bottom: 1.5px;
 }
 .search-element .form-control{
     padding: 1rem 2rem;
